@@ -48,7 +48,7 @@ if($this->session->userdata('perfil') != 2){
                             </div>
                         </div>  
                         <div class="form-group">
-                            <div class="col-md-3 col-sm-12 col-xs-12">
+                            <div class="col-md-4 col-sm-12 col-xs-12">
                                 <label for="id_desenvolvedora_distribuidora">Desenvolvedora/Distribuidora *:</label>
                                 <select id="id_desenvolvedora_distribuidora" name="id_desenvolvedora_distribuidora" class="form-control" required>
                                     <option value="" selected disabled>Selecione..</option>
@@ -61,7 +61,15 @@ if($this->session->userdata('perfil') != 2){
                                 <label for="nota">Nota * :</label>
                                 <input type="text" id="nota" class="form-control" placeholder="Nota" name="nota" required />
                             </div>
+
                         </div>  
+
+                        <div class="form-group">    
+                            <div class="col-md-6 col-sm-12 col-xs-12">
+                                <label for="imagem">Imagem * :</label>
+                                <input type="file" id="imagem" class="form-control" placeholder="imagem" name="imagem" accept="image/*" required />
+                            </div>
+                        </div>
                         <div class="form-group">    
                             <div class="col-md-12">             
                                 <br />

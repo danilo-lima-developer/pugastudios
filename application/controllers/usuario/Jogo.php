@@ -26,6 +26,16 @@ class Jogo extends CI_Controller
 
 	public function cadastrar_jogo()
 	{
+
+		$config['upload_path']          = './assets/imagens/';
+		$config['max_size']             = 60000;
+		$config['allowed_types']        = 'jpeg|jpg|png';
+
+		$this->load->library('upload', $config);
+
+		$this->upload->do_upload('imagem');
+
+
 		$dados = array(
 		'titulo'=> $this->input->post('titulo'),
 		'ano_publicacao'=> $this->input->post('ano_publicacao'),
@@ -39,5 +49,11 @@ class Jogo extends CI_Controller
 		
 		redirect('usuario/home');
 	}
+
+	public function destroy($id_jogo)
+    {
+        $this->jogo_model->destroy($id_jogo);
+        redirect("usuario/home");
+    }
 	
 }

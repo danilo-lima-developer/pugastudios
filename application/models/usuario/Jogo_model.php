@@ -29,4 +29,11 @@ class Jogo_model extends CI_model
 		return $this->db->get()->result_array();
 	}
 
+	public function destroy($id_jogo)
+	{
+			$this->db->where('id_jogo', $id_jogo);
+			$this->db->where("id_usuario", $this->session->userdata('usuario_id'));
+			$this->db->delete('tb_jogos');
+	}
+
 }

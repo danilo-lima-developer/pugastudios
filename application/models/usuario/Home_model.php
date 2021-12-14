@@ -77,6 +77,7 @@ class Home_model extends CI_model
 		');
 		$this->db->from('tb_jogos');
 		$this->db->where('id_usuario', $this->session->userdata('usuario_id'));
+		$this->db->order_by('id_jogo', 'DESC');
 		return $this->db->get()->result_array();
 	}
 

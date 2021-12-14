@@ -120,13 +120,12 @@ if($this->session->userdata('perfil') != 2){
                             <img style="width: 100%; display: block;" src="<?= BASE_URL()?>assets/imagens/media.jpg" alt="image" />
                             <div class="mask no-caption">
                                 <div class="tools tools-bottom">
-                                <a href="#"><i class="fa fa-link"></i></a>
                                 <a href="#"><i class="fa fa-pencil"></i></a>
-                                <a href="#"><i class="fa fa-times"></i></a>
+                                <a href="javascript:goDelete(<?= $jogo['id_jogo'] ?>)"><i class="fa fa-times"></i></a>
                                 </div>
                             </div>
                             </div>
-                            <div class="caption" style="height: 400px;">
+                            <div class="caption">
                             <p><strong><?= $jogo["titulo"]?></strong>
                             </p>
                             <p><strong>Nota: </strong><?= $jogo["nota"]?></p>
@@ -144,4 +143,11 @@ if($this->session->userdata('perfil') != 2){
 
 </div>
 <!-- /page content -->
-
+<script>
+	function goDelete(id) {
+		if (confirm("Deseja apagar este Jogo?")) {
+			window.location.href = 'jogo/destroy/' + id;
+			redirect("usuario/home");
+		}
+	}
+</script>
