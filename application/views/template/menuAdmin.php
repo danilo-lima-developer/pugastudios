@@ -11,7 +11,6 @@
               <div class="menu_section">
                 <h3>CADASTROS</h3>
                 <ul class="nav side-menu">
-                <li><a href="<?= BASE_URL() ?>admin/jogo/pagina_cadastro_jogo"><i class="fa fa-gamepad"></i> Jogos <span class="label label-success pull-right"></span></a></li>
 
                   <li><a href="<?= BASE_URL() ?>admin/admin/pagina_cadastro_usuario"><i class="fa fa-users"></i> Usuários <span class="label label-success pull-right"></span></a></li>
                   
