@@ -30,9 +30,9 @@
     <script src="<?= BASE_URL() ?>assets/js/jquery.mask.js"></script>
   </head>
   <script>
-    // $(document).ready(function() {
-    //   $('#cpf').mask('000.000.000-00');
-    // });
+     $(document).ready(function() {
+       $('#fone').mask('(00) 0.0000-0000');
+     });
   </script>
 
   <body class="login">
@@ -89,7 +89,7 @@
               </div>
               <div>
               <div>
-                <input id="senha" name="senha" type="password" class="form-control" placeholder="Senha" required="" />
+                <input id="senha" name="senha" type="password" class="form-control" placeholder="Senha" minlength="6" required="" />
               </div>
               <div>
                 <input id="fone" name="fone" type="text" class="form-control" placeholder="Fone" required="" />
