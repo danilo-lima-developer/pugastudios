@@ -56,7 +56,7 @@ ALTER TABLE `tb_usuario` ADD CONSTRAINT `fk_id_tipo_usuario` FOREIGN KEY ( `id_t
 CREATE TABLE tb_jogos(
     id_jogo INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     titulo VARCHAR(50) NOT NULL COLLATE utf8_general_ci,
-    ano_publicacao DATE,
+    ano_publicacao INT NOT NULL,
     id_estilo INT(3) NOT NULL,
     id_desenvolvedora_distribuidora INT(3) NOT NULL,
     nota float,

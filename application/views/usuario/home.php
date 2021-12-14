@@ -120,7 +120,7 @@ if($this->session->userdata('perfil') != 2){
                             <img style="width: 100%; display: block;" src="<?= BASE_URL()?>assets/imagens/media.jpg" alt="image" />
                             <div class="mask no-caption">
                                 <div class="tools tools-bottom">
-                                <a href="#"><i class="fa fa-pencil"></i></a>
+                                <a href="<?= BASE_URL()?>usuario/jogo/pagina_edicao_jogo/<?= $jogo['id_jogo'] ?>"><i class="fa fa-pencil"></i></a>
                                 <a href="javascript:goDelete(<?= $jogo['id_jogo'] ?>)"><i class="fa fa-times"></i></a>
                                 </div>
                             </div>
