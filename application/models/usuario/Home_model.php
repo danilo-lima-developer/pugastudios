@@ -67,4 +67,17 @@ class Home_model extends CI_model
 		return $row->num;
 	}
 
+	public function listar_jogos()
+	{
+		
+		$this->db->select('tb_jogos.id_jogo as id_jogo,
+			tb_jogos.titulo as titulo,
+			tb_jogos.ano_publicacao as ano_publicacao,
+			tb_jogos.nota as nota
+		');
+		$this->db->from('tb_jogos');
+		$this->db->where('id_usuario', $this->session->userdata('usuario_id'));
+		return $this->db->get()->result_array();
+	}
+
 }

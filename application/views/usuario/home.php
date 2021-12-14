@@ -113,102 +113,28 @@ if($this->session->userdata('perfil') != 2){
                 <div class="x_content">
 
                 <div class="row">
+                    <?php foreach($jogos as $jogo) : ?>
+                        <div class="col-md-55">
+                        <div class="thumbnail">
+                            <div class="image view view-first">
+                            <img style="width: 100%; display: block;" src="<?= BASE_URL()?>assets/imagens/media.jpg" alt="image" />
+                            <div class="mask no-caption">
+                                <div class="tools tools-bottom">
+                                <a href="#"><i class="fa fa-link"></i></a>
+                                <a href="#"><i class="fa fa-pencil"></i></a>
+                                <a href="#"><i class="fa fa-times"></i></a>
+                                </div>
+                            </div>
+                            </div>
+                            <div class="caption" style="height: 400px;">
+                            <p><strong><?= $jogo["titulo"]?></strong>
+                            </p>
+                            <p><strong>Nota: </strong><?= $jogo["nota"]?></p>
+                            </div>
+                        </div>
+                        </div>
+                    <?php endforeach; ?>
 
-                    <div class="col-md-55">
-                    <div class="thumbnail">
-                        <div class="image view view-first">
-                        <img style="width: 100%; display: block;" src="<?= BASE_URL()?>assets/imagens/media.jpg" alt="image" />
-                        <div class="mask no-caption">
-                            <div class="tools tools-bottom">
-                            <a href="#"><i class="fa fa-link"></i></a>
-                            <a href="#"><i class="fa fa-pencil"></i></a>
-                            <a href="#"><i class="fa fa-times"></i></a>
-                            </div>
-                        </div>
-                        </div>
-                        <div class="caption">
-                        <p><strong>Título Jogo</strong>
-                        </p>
-                        <p>Nota</p>
-                        </div>
-                    </div>
-                    </div>
-                    <div class="col-md-55">
-                    <div class="thumbnail">
-                        <div class="image view view-first">
-                        <img style="width: 100%; display: block;" src="<?= BASE_URL()?>assets/imagens/media.jpg" alt="image" />
-                        <div class="mask no-caption">
-                            <div class="tools tools-bottom">
-                            <a href="#"><i class="fa fa-link"></i></a>
-                            <a href="#"><i class="fa fa-pencil"></i></a>
-                            <a href="#"><i class="fa fa-times"></i></a>
-                            </div>
-                        </div>
-                        </div>
-                        <div class="caption">
-                        <p><strong>Título Jogo</strong>
-                        </p>
-                        <p>Nota</p>
-                        </div>
-                    </div>
-                    </div>
-                    <div class="col-md-55">
-                    <div class="thumbnail">
-                        <div class="image view view-first">
-                        <img style="width: 100%; display: block;" src="<?= BASE_URL()?>assets/imagens/media.jpg" alt="image" />
-                        <div class="mask no-caption">
-                            <div class="tools tools-bottom">
-                            <a href="#"><i class="fa fa-link"></i></a>
-                            <a href="#"><i class="fa fa-pencil"></i></a>
-                            <a href="#"><i class="fa fa-times"></i></a>
-                            </div>
-                        </div>
-                        </div>
-                        <div class="caption">
-                        <p><strong>Título Jogo</strong>
-                        </p>
-                        <p>Nota</p>
-                        </div>
-                    </div>
-                    </div>
-                    <div class="col-md-55">
-                    <div class="thumbnail">
-                        <div class="image view view-first">
-                        <img style="width: 100%; display: block;" src="<?= BASE_URL()?>assets/imagens/media.jpg" alt="image" />
-                        <div class="mask no-caption">
-                            <div class="tools tools-bottom">
-                            <a href="#"><i class="fa fa-link"></i></a>
-                            <a href="#"><i class="fa fa-pencil"></i></a>
-                            <a href="#"><i class="fa fa-times"></i></a>
-                            </div>
-                        </div>
-                        </div>
-                        <div class="caption">
-                        <p><strong>Título Jogo</strong>
-                        </p>
-                        <p>Nota</p>
-                        </div>
-                    </div>
-                    </div>
-                    <div class="col-md-55">
-                    <div class="thumbnail">
-                        <div class="image view view-first">
-                        <img style="width: 100%; display: block;" src="<?= BASE_URL()?>assets/imagens/media.jpg" alt="image" />
-                        <div class="mask no-caption">
-                            <div class="tools tools-bottom">
-                            <a href="#"><i class="fa fa-link"></i></a>
-                            <a href="#"><i class="fa fa-pencil"></i></a>
-                            <a href="#"><i class="fa fa-times"></i></a>
-                            </div>
-                        </div>
-                        </div>
-                        <div class="caption">
-                        <p><strong>Título Jogo</strong>
-                        </p>
-                        <p>Nota</p>
-                        </div>
-                    </div>
-                    </div>
                 </div>
                 </div>
             </div>

@@ -33,6 +33,8 @@ class Home extends CI_Controller
 			'total_usuarios' => $total_usuarios
 		);
 
+		$dados["jogos"] = $this->home_model->listar_jogos();
+		
 		$this->load->view('template/header');
 		$this->load->view('template/menuUsuario');
 		$this->load->view('template/topNavegacao');
